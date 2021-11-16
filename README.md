@@ -1,2 +1,2 @@
 # mmplayhist
-write last played history stored by MediaMonkey directly to music file tags
+If MediaMonkey and Linux share the same music library location, the last played history stored by MediaMonkey can be written directly to music file tags using the mmplayhist.sh utility. Simply place a copy of the MediaMonkey database (MM.DB) in your $HOME directory, and run the utility, which takes into account differences between Windows versus Linux filepath characters. The utility uses SQLite (required) to extract a table and kid3-cli (required) to process the last played data to your file tags, then removes the MM.DB copy and table after processing the tags.
